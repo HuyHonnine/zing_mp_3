@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/58d0ba52f1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/58d0ba52f1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/zingmp3.css">
+
+    <title>zing mp3</title>
+</head>
+
+<div class="header">
+    <div class="header-left">
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-arrow-right"></i>
+    </div>
+    <div class="header-mid">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV">
+    </div>
+    <div class="header-right">
+        <a href=""><i class="fas fa-tshirt"></i></a>
+        <a href=""><i class="fas fa-upload"></i></a>
+        <a href=""><i class="fas fa-cog"></i></a>
+        <div class="header-right-img">
+            <a href=""><img src="./imgzingmp3/IMG_2940.jpeg" alt=""></a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <div class="main" style="background-image: url(./imgzingmp3/background-theme/backroundThemes/0.svg);"></div>
+
+    <div class="navbar">
+        <div class="logo">
+            <a href=""><img src="./imgzingmp3/sidebar-icon/logo/logo-dark.svg" alt=""></a>
+        </div>
+
+        <div class="nav">
+            <a href=""><i class="far fa-play-circle"></i> cá nhân</a>
+            <a href=""><i class="fas fa-compact-disc"></i> khám phá</a>
+            <a href=""><i class="fas fa-chart-line"></i> #zingchart</a>
+            <a href=""><i class="fas fa-broadcast-tower"></i> radio <span>live</span></a>
+            <a href=""><i class="far fa-list-alt"></i> theo dõi</a>
+        </div>
+
+        <div class="slide-line"></div>
+
+        <div class="slide-libraly">
+            <div class="slide-libraly-top">
+                <a href=""><i class="fas fa-music"></i> nhạc mới</a>
+                <a href=""><i class="fab fa-buromobelexperte"></i> thể loại</a>
+                <a href=""><i class="fas fa-star"></i> top 100</a>
+                <a href=""><i class="fas fa-photo-video"></i> mv</a>
+            </div>
+
+            <div class="slide-libraly-mid">
+                <span>Nghe nhạc không quảng cáo cùng kho nhạc VIP</span>
+                <p>nâng cấp vip</p>
+            </div>
+
+            <div class="slide-libraly-bottom">
+                <div class="libraly-heading">
+                    <div class="libraly-heading-font">
+                        <p>thư viện</p>
+                    </div>
+                    <div class="libraly-heading-icon"><i class="fas fa-pencil-alt"></i></div>
+                </div>
+
+                <div class="libraly-list">
+                    <a href=""><i class="fas fa-music"></i> bài hát</a>
+                    <a href=""><i class="far fa-file-audio"></i> playlist</a>
+                    <a href=""><i class="fas fa-clock"></i> gần đây</a>
+                </div>
+
+                <div class="libraly-recommend">
+                    <p>replay</p>
+                </div>
+                <div class="libraly-recommend">
+                    <p>nhạc xuân</p>
+                </div>
+                <div class="libraly-recommend">
+                    <p>nhạc trung quốc</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-playlist">
+            <i class="fas fa-plus js__main-color"></i>
+            <span>Tạo playlist mới</span>
+        </div>
+    </div>
+    <!-- music control -->
+
+    <div class="music-control">
+
+        <div class="control-left">
+            <div class="control-left-img">
+                <img src="./imgzingmp3/songs/10.jpg" alt="">
+            </div>
+            <div class="control-left-name">
+                <span>muộn rồi mà sao còn</span>
+                <p>Sơn Tùng M-TP</p>
+            </div>
+            <div class="control-left-btn">
+                <i class="fa fa-heart"></i>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+
+        <div class="control-mid">
+            <div class="control-mid-playmusic">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-caret-left"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-caret-right"></i>
+                <i class="fas fa-redo"></i>
+            </div>
+            <div class="control-mid-time">
+                <span>00:00</span>
+                <input id="progress" class="time-input" type="range" value="0" step="1" min="0" max="100">
+                <span>03:51</span>
+            </div>
+        </div>
+
+        <div class="control-right">
+            <i class="fas fa-photo-video"></i>
+            <i class="fas fa-microphone"></i>
+            <i class="far fa-square"></i>
+            <i class="fas fa-volume-down"></i>
+            <input id="progress1" class="volume-input" type="range" value="100" step="1" min="0" max="100">
+        </div>
+    </div>
+
+    <!-- thanh header -->
+    <div class="main-mid">
+        <div class="header" id="header">
+            <div class="header-left">
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="header-mid">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV">
+            </div>
+            <div class="header-right">
+                <a href=""><i class="fas fa-tshirt"></i></a>
+                <a href=""><i class="fas fa-upload"></i></a>
+                <a href=""><i class="fas fa-cog"></i></a>
+                <div class="header-right-img">
+                    <a href=""><img src="./imgzingmp3/IMG_2940.jpeg" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="box-profile">
+
+                <div class="profile-vip">
+                    <span class="profile-vip-none">nâng cấp vip</span>
+                    <span>nhập code vip</span>
+                    <span class="profile-vip-btn"><i class="fas fa-ellipsis-h"></i></span>
+                </div>
+
+                <div class="profile-img">
+                    <a href="profile-vip-btn"><img src="./imgzingmp3/IMG_2940.jpeg" alt=""></a>
+                </div>
+
+                <div class="profile-name">
+                    <span>hồ anh huy</span>
+                </div>
+
+                <div class="music-option">
+                    <div class="option-box">
+                        <p>tổng quan</p>
+                    </div>
+
+                    <div class="option-box">
+                        <p>bài hát</p>
+                    </div>
+
+
+                    <div class="option-box">
+                        <p>playlist</p>
+                    </div>
+
+                    <div class="option-box">
+                        <p>nghệ sĩ</p>
+                    </div>
+
+                    <div class="option-box">
+                        <p><i class="fas fa-ellipsis-h"></i></p>
+                    </div>
+
+                </div>
+
+                <div class="option-all">
+
+                    <div class="option-all-song">
+                        <div class="option-heading">
+                            <div class="option-heading-heading">
+                                <p>bài hát</p>
+                            </div>
+
+                            <div class="more-list">
+                                <span>Tất cả</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+
+                            <div class="option-heading-btn">
+                                <a href=""><i class="fas fa-upload"></i> tải lên</a>
+                                <a href=""><i class="fas fa-play"></i> phát tất cả</a>
+                            </div>
+                        </div>
+
+                        <div class="option-song">
+
+                            <div class="slider swiper">
+
+                                <div class="swiper-wrapper">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/3.jpg" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/0.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/1.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/10.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/11.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/12.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/2.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/3.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/4.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/5.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/6.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/7.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/14.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/15.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/9.webp" alt="">
+                                    <img class="swiper-slide" src="./imgzingmp3/slider/8.webp" alt="">
+                                </div>
+                            </div>
+
+                            <div class="option-song-song">
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/1.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>chạy về khóc với anh</span>
+                                        <p>erik, duzme remix</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>4:05</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/2.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>Là Ai Từ Bỏ Là Ai Vô Tình</span>
+                                        <p>Hương Ly, Jombie (G5R), RIN</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>3:25</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/3.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>Gieo Quẻ</span>
+                                        <p>Hoàng Thuỳ Linh, ĐEN, Orinn</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>4:27</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/4.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>Vui Lắm Nha</span>
+                                        <p>Hương Ly, Jombie, RIN</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>5:16</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/5.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>Lưu Số Em Đi</span>
+                                        <p>Huỳnh Văn, V.P. Tiên, Đại Mèo</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>4:10</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/6.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>Như Một Người Dưng</span>
+                                        <p>Nguyễn Thạc Bảo Ngọc</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>5:05</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/7.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>Ôm Nhiều Mộng Mơ</span>
+                                        <p>Phát Huy T4, Đại Mèo</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>3:16</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/13.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>2 Phút Hơn</span>
+                                        <p>pháo, KAIZ</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>5:02</span>
+                                    </div>
+                                </div>
+
+                                <div class="box-song">
+                                    <div class="box-song-img">
+                                        <img src="./imgzingmp3/songs/11.webp" alt="">
+                                    </div>
+                                    <div class="box-song-info">
+                                        <span>Cô Đơn Dành Cho Ai</span>
+                                        <p>NAL, LEE KEN</p>
+                                    </div>
+                                    <div class="box-song-icon">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="box-song-time">
+                                        <span>4:45</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-playlist">
+                    <div class="heading">
+                        <h3>playlist</h3>
+                        <div class="more-list">
+                            <span>Tất cả</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="playlist-playlist">
+                        <div class="create-playlist">
+                            <i class="fas fa-plus"></i>
+                            <span>Tạo playlist mới</span>
+                        </div>
+
+                        <div class="my-playlist">
+                            <div class="playlist-img">
+                                <img src="./imgzingmp3/playlist/1.webp" alt="">
+                            </div>
+                            <div class="playlist-sub">
+                                <p>replay</p>
+                                <span>huyhonine</span>
+                            </div>
+                        </div>
+
+                        <div class="my-playlist">
+                            <div class="playlist-img">
+                                <img src="./imgzingmp3/playlist/2.webp" alt="">
+                            </div>
+                            <div class="playlist-sub">
+                                <p>4U-On Repeat</p>
+                                <span>zingmp3</span>
+                            </div>
+                        </div>
+
+                        <div class="my-playlist">
+                            <div class="playlist-img">
+                                <img src="./imgzingmp3/playlist/3.webp" alt="">
+                            </div>
+                            <div class="playlist-sub">
+                                <p>#zingchart</p>
+                                <span>zingmp3</span>
+                            </div>
+                        </div>
+
+                        <div class="my-playlist">
+                            <div class="playlist-img">
+                                <img src="./imgzingmp3/playlist/4.webp" alt="">
+                            </div>
+                            <div class="playlist-sub">
+                                <p>nhạc của huy</p>
+                                <span>huyhonine</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-mv">
+
+                    <div class="heading">
+                        <h3>MV</h3>
+                        <div class="more-list">
+                            <span>Tất cả</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="container-mv">
+                        <div class="box-mv">
+                            <div class="mv-img">
+                                <img src="./imgzingmp3/mv/1.webp" alt="">
+                                <i class="far fa-play-circle"></i>
+                            </div>
+                            <div class="mv-profile">
+                                <div class="mv-avt"><img src="./imgzingmp3/mv/icon1.jpg" alt=""></div>
+                                <div class="mv-sub">
+                                    <p>thay tôi yêu cô ấy</p>
+                                    <span>thanh tung</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-mv">
+                            <div class="mv-img">
+                                <img src="./imgzingmp3/mv/2.webp" alt="">
+                                <i class="far fa-play-circle"></i>
+                            </div>
+                            <div class="mv-profile">
+                                <div class="mv-avt"><img src="./imgzingmp3/mv/icon2.jpg" alt=""></div>
+                                <div class="mv-sub">
+                                    <p>Đếm Cừu</p>
+                                    <span>Han Sara, Kay Trần</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-mv">
+                            <div class="mv-img">
+                                <img src="./imgzingmp3/mv/3.webp" alt="">
+                                <i class="far fa-play-circle"></i>
+                            </div>
+                            <div class="mv-profile">
+                                <div class="mv-avt"><img src="./imgzingmp3/mv/icon3.jpg" alt=""></div>
+                                <div class="mv-sub">
+                                    <p>que va</p>
+                                    <span>Alex Sensation, Ozuna</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-singer">
+                    <div class="heading">
+                        <h3>Nghệ Sĩ</h3>
+                        <div class="more-list">
+                            <span>Tất cả</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="singer">
+                        <div class="singer-box">
+                            <div class="singer-img">
+                                <img src="./imgzingmp3/singer/1.webp" alt="">
+                            </div>
+                            <div class="singer-information">
+                                <h3>Mr.Siro</h3>
+                                <span>757K quan tâm</span>
+                                <a href="" class="singer-btn"><i class="fas fa-random"></i> góc nhạc</a>
+                            </div>
+                        </div>
+
+                        <div class="singer-box">
+                            <div class="singer-img">
+                                <img src="./imgzingmp3/singer/2.webp" alt="">
+                            </div>
+                            <div class="singer-information">
+                                <h3>Bích Phương</h3>
+                                <span>381K quan tâm</span>
+                                <a href="" class="singer-btn"><i class="fas fa-random"></i> góc nhạc</a>
+                            </div>
+                        </div>
+
+                        <div class="singer-box">
+                            <div class="singer-img">
+                                <img src="./imgzingmp3/singer/3.webp" alt="">
+                            </div>
+                            <div class="singer-information">
+                                <h3>SOOBIN</h3>
+                                <span>757K quan tâm</span>
+                                <a href="" class="singer-btn"><i class="fas fa-random"></i> góc nhạc</a>
+                            </div>
+                        </div>
+
+                        <div class="singer-box">
+                            <div class="singer-img">
+                                <img src="./imgzingmp3/singer/4.webp" alt="">
+                            </div>
+                            <div class="singer-information">
+                                <h3>Sơn Tùng M-TP</h3>
+                                <span>2.2M quan tâm</span>
+                                <a href="" class="singer-btn"><i class="fas fa-random"></i> góc nhạc</a>
+                            </div>
+                        </div>
+
+                        <div class="singer-box">
+                            <div class="singer-img">
+                                <img src="./imgzingmp3/singer/5.webp" alt="">
+                            </div>
+                            <div class="singer-information">
+                                <h3>Hương ly</h3>
+                                <span>604K quan tâm</span>
+                                <a href="" class="singer-btn"><i class="fas fa-random"></i> góc nhạc</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <div class="next-song">
+        <div class="container-top">
+            <div class="list-btn">
+                <p class="list-btn-light">danh sách phát</p>
+                <p>nghe gần đây</p>
+            </div>
+            <div class="icon-next-song">
+                <i class="fas fa-stopwatch"></i>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+
+        <div class="container-mid">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/0.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>anh đã lạc vào</span>
+                    <p>green, đại mèo remix</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-heading">
+            <p>tiếp theo</p>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/1.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>chạy về khóc với anh</span>
+                    <p>erik, duzme remix</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/2.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>Là Ai Từ Bỏ Là Ai Vô Tình</span>
+                    <p>Hương Ly, Jombie (G5R), RIN</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/3.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>sẵn sàng yêu em đi thôi</span>
+                    <p>woni, minh tú, đại mèo remix</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/4.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>Vui Lắm Nha</span>
+                    <p>Hương Ly, Jombie, RIN</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/5.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>sẵn sàng yêu em đi thôi</span>
+                    <p>woni, minh tú, đại mèo remix</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/6.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>sẵn sàng yêu em đi thôi</span>
+                    <p>woni, minh tú, đại mèo remix</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/7.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>sẵn sàng yêu em đi thôi</span>
+                    <p>woni, minh tú, đại mèo remix</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/8.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>sẵn sàng yêu em đi thôi</span>
+                    <p>woni, minh tú, đại mèo remix</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/9.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>sẵn sàng yêu em đi thôi</span>
+                    <p>woni, minh tú, đại mèo remix</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/13.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>2 Phút Hơn</span>
+                    <p>pháo, KAIZ</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-mid next">
+            <div class="box-song">
+                <div class="box-song-img">
+                    <img src="./imgzingmp3/songs/11.webp" alt="">
+                </div>
+                <div class="box-song-info">
+                    <span>Cô Đơn Dành Cho Ai</span>
+                    <p>NAL, LEE KEN</p>
+                </div>
+                <div class="box-song-icon">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="./js/mp3.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+</html>
